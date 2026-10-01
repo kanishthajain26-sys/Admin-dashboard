@@ -17,7 +17,7 @@ function Sidebar({ activePage, setActivePage }) {
   return (
     <aside className="sidebar">
 
-      {/* Logo */}
+    
       <div className="logo">
 
         <div className="logo-icon">
@@ -31,7 +31,7 @@ function Sidebar({ activePage, setActivePage }) {
 
       </div>
 
-      {/* Menu */}
+     
       <nav className="sidebar-menu">
 
         {menuItems.map((item) => (
@@ -54,7 +54,7 @@ function Sidebar({ activePage, setActivePage }) {
 
       </nav>
 
-      {/* Admin Profile */}
+     
       <div className="admin-profile">
 
         <div className="admin-avatar">

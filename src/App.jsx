@@ -54,9 +54,7 @@ function App() {
     },
   ]);
 
-  // -----------------------------
-  // Dashboard Statistics
-  // -----------------------------
+  
 
   const totalUsers = users.length;
 
@@ -72,17 +70,13 @@ function App() {
     (user) => user.role === "Developer"
   ).length;
 
-  // -----------------------------
-  // Search
-  // -----------------------------
+ 
 
   const filteredUsers = users.filter((user) =>
     user.name.toLowerCase().includes(search.toLowerCase())
   );
 
-  // -----------------------------
-  // Add User
-  // -----------------------------
+  
 
   function handleAddUser() {
     if (
@@ -108,9 +102,7 @@ function App() {
     setShowAddUser(false);
   }
 
-  // -----------------------------
-  // Edit User
-  // -----------------------------
+  
 
   function handleEditUser(user) {
     setEditingUser(user);
@@ -123,9 +115,7 @@ function App() {
     setShowEditUser(true);
   }
 
-  // -----------------------------
-  // Update User
-  // -----------------------------
+  
 
   function handleUpdateUser() {
     if (
@@ -158,9 +148,6 @@ function App() {
     setShowEditUser(false);
   }
 
-  // -----------------------------
-  // Delete User
-  // -----------------------------
 
   function handleDeleteUser(id) {
     const confirmDelete = window.confirm(
@@ -180,10 +167,7 @@ function App() {
     setSelectedUser(null);
   }
 
-  // -----------------------------
-  // Reset Form
-  // -----------------------------
-
+  
   function resetForm() {
     setName("");
     setEmail("");
@@ -191,18 +175,13 @@ function App() {
     setStatus("Active");
   }
 
-  // -----------------------------
-  // Close Add Modal
-  // -----------------------------
-
+  
   function handleCloseAddUser() {
     setShowAddUser(false);
     resetForm();
   }
 
-  // -----------------------------
-  // Close Edit Modal
-  // -----------------------------
+  
 
   function handleCloseEditUser() {
     setShowEditUser(false);
@@ -210,9 +189,7 @@ function App() {
     resetForm();
   }
 
-  // -----------------------------
-  // Dashboard
-  // -----------------------------
+  
 
   function renderDashboard() {
     return (
@@ -282,9 +259,7 @@ function App() {
     );
   }
 
-  // -----------------------------
-  // Users Page
-  // -----------------------------
+  
 
   function renderUsers() {
     return (
@@ -324,9 +299,6 @@ function App() {
     );
   }
 
-  // -----------------------------
-  // User Table
-  // -----------------------------
 
   function UserTable() {
     return (
@@ -413,9 +385,6 @@ function App() {
     );
   }
 
-  // -----------------------------
-  // Settings
-  // -----------------------------
 
   function renderSettings() {
     return (
@@ -460,9 +429,7 @@ function App() {
     );
   }
 
-  // -----------------------------
-  // Main UI
-  // -----------------------------
+  
 
   return (
     <div className="dashboard">
@@ -485,10 +452,7 @@ function App() {
 
       </main>
 
-      {/* -----------------------------
-          Add User Modal
-      ----------------------------- */}
-
+      
       {showAddUser && (
         <Modal
           title="Add New User"
@@ -557,9 +521,7 @@ function App() {
         </Modal>
       )}
 
-      {/* -----------------------------
-          Edit User Modal
-      ----------------------------- */}
+      
 
       {showEditUser && (
         <Modal
@@ -629,9 +591,7 @@ function App() {
         </Modal>
       )}
 
-      {/* -----------------------------
-          View User Modal
-      ----------------------------- */}
+      
 
       {selectedUser && (
         <Modal

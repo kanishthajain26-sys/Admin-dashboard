@@ -703,10 +703,6 @@ tbody tr:last-child td {
 }
 
 
-/* =========================
-   ADD USER FORM
-========================= */
-
 .add-user-form {
   display: flex;
   flex-direction: column;
